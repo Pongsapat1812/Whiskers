@@ -1,0 +1,330 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Nothing You Could Do", cursive;
+	font-weight: 400;
+	box-sizing: border-box;
+}
+
+:root {
+	--black: #000000;
+	--white: #FFFFFF;
+	--gray: #F1F1F1;
+    --background: #FBFBFB;
+	--hover: #A9A9A9;
+}
+
+body {
+	background-color: var(--background);
+	height: 100%;
+}
+
+section {
+	width: 100%;
+	padding: 15vh 15vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+hr {
+    width: 100%;
+    margin: 2vw auto;
+    border: 0.1vw solid var(--black);
+}
+
+input {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+
+textarea {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+
+button {
+	padding: 1vw 2vw;
+	background-color: var(--white);
+	color: var(--black);
+	font-size: 3.5vw;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	border: 0.1vw solid var(--black);
+}
+
+button:hover {
+	color: var(--hover);
+	border: 0.1vw solid var(--hover);
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+
+
+
+
+.text-15 {
+	font-size: 1.5vw;
+	line-height: 0.75;
+}
+
+.text-2 {
+	font-size: 2vw;
+	line-height: 0.75;
+}
+
+.text-25 {
+	font-size: 2.5vw;
+	line-height: 0.75;
+}
+
+.text-3 {
+	font-size: 3vw;
+	line-height: 0.75;
+}
+
+.text-35 {
+	font-size: 3.5vw;
+	line-height: 0.75;
+}
+
+.text-4 {
+	font-size: 4vw;
+	line-height: 0.75;
+}
+
+.text-45 {
+	font-size: 4.5vw;
+	line-height: 0.75;
+}
+
+
+
+
+
+.close-left {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    cursor: pointer;
+	transition: transform 0.25s ease, fill 0.25s ease;
+}
+
+.close-left:hover {
+	transform: scale(1.5);
+    fill: var(--hover);
+}
+
+.close-right {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+	transition: transform 0.25s ease, fill 0.25s ease;
+}
+
+.close-right:hover {
+	transform: scale(1.5);
+    fill: var(--hover);
+}
+
+
+
+
+
+.leftside {
+    width: 50%;
+}
+
+.leftside-container {
+    width: 100%;
+}
+
+.rightside {
+    width: 50%;
+}
+
+.rightside-container {
+    width: 100%;
+}
+
+.middleside {
+    width: 0.2vw;
+    background-color: var(--black);
+    height: 100%;
+    margin: 2vw;
+}
+
+
+
+
+
+.submit-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 10vh;
+	margin: 1vh auto;
+	font-size: 4vw;
+	text-decoration: none;
+	background-color: var(--white);
+	color: var(--black);
+	border: 0.1vw solid var(--black);
+	cursor: pointer;	
+}
+
+.submit-btn:hover {
+	color: var(--hover);
+	border: 0.1vw solid var(--hover);
+}
+
+.authen-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5vh;
+    margin: 1vh auto;
+    font-size: 2vw;
+    text-decoration: none;
+    background-color: var(--white);
+    color: var(--black);
+    border: 0.1vw solid var(--black);
+    cursor: pointer;    
+}
+
+.authen-btn:hover {
+    color: var(--hover);
+    border: 0.1vw solid var(--hover);
+}
+
+
+
+
+
+.broadcast {
+	width: 100%;
+	max-width: 1500px;
+	height: 100px;
+	background-color: var(--white);
+	border: 0.1vw dashed var(--black);
+}
+
+
+
+
+
+.container {
+	width: 100%;
+	max-width: 1500px;
+	height: auto;
+	margin: 2vw auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.container-item {
+	text-align: center;
+}
+
+
+
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.authen-container {
+    width: 60vw;
+    max-width: 600px;
+    height: 60vh;
+    max-height: 600px;
+    padding: 1% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background);
+    border: 0.2vw solid var(--black);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.authen-item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1vh auto;
+	padding: 1vh 1vw;
+	border: 0.1vw solid var(--black);
+	background-color: var(--gray);
+	gap: 1vw;
+}
+
+.authen-item input {
+    width: 100%;
+    padding: 1vw;
+    font-size: 1vw;
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+	border: 0.1vw dashed var(--black);
+    outline: none;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.authen-content {
+	width: 100%;
+}
+
+.material-symbols-outlined {
+    font-size: 5vw;
+    color: var(--black);
+	background-color: var(--white);
+	border: 0.1vw dashed var(--black);
+}
+
+
+
+
+
+.password {
+	position: relative;
+	width: 100%;	
+}
+
+.password .material-symbols-outlined {
+	position: absolute;
+	top: 50%;
+	right: 1vw;
+	transform: translateY(-50%);
+	cursor: pointer;
+	color: var(--black);
+	font-size: 2vw;
+	background-color: transparent;
+	border: 0.1vw solid var(--black);	
+}
+
+.password .material-symbols-outlined:hover {
+	color: var(--hover);
+	border: 0.1vw solid var(--hover);
+}

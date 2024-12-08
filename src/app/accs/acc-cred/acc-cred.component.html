@@ -1,0 +1,59 @@
+<div class="popup" *ngIf="showAccount">
+	<div class="account-container">
+		<div class="leftside">
+			<div class="close-btn" (click)="closeAccount()">
+				<svg xmlns="http://www.w3.org/2000/svg" height="55px" viewBox="0 -960 960 960" width="55px" fill="#000000" class="close-left">
+					<path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+				</svg>
+			</div>
+			<div class="leftside-container">
+				<div class="text-45">account</div>
+				<div class="account-item">
+					<div class="upload">
+						<img [src]="imageSrc" *ngIf="imageSrc" />
+						<input type="file" id="upload" accept="image/*" (change)="upload($event)" />
+						<label for="upload" class="custom-upload">upload</label>
+					</div>
+				</div>
+				<div class="authen-item">
+					<div class="material-symbols-outlined">mail</div>
+					<input type="email" name="email" [(ngModel)]="email" placeholder="email" required #emailInput="ngModel" />
+				</div>
+				<div class="authen-item">
+					<div class="material-symbols-outlined">alternate_email</div>
+					<div class="password">
+						<input [type]="cred1 ? 'text' : 'password'" name="pwd1" [(ngModel)]="pwd1" placeholder="password" required #passwordInput1="ngModel" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="middleside"></div>
+		<div class="rightside">
+			<div class="close-btn" (click)="closeAccount()">
+				<svg xmlns="http://www.w3.org/2000/svg" height="55px" viewBox="0 -960 960 960" width="55px" fill="#000000" class="close-right">
+					<path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+				</svg>
+			</div>
+			<div class="rightside-container">
+				<div class="text-35">credentials</div>
+				<div class="authen-item">
+					<div class="material-symbols-outlined">alternate_email</div>
+					<div class="password">
+						<input [type]="cred2 ? 'text' : 'password'" name="pwd2" [(ngModel)]="pwd2" placeholder="password" required #passwordInput1="ngModel" />
+						<div class="material-symbols-outlined" (click)="oldpwd()">{{ cred2 ? 'visibility' : 'visibility_off' }}</div>
+					</div>
+				</div>
+				<div class="authen-item">
+					<div class="material-symbols-outlined">lock_reset</div>
+					<div class="password">
+						<input [type]="cred3 ? 'text' : 'password'" name="pwd3" [(ngModel)]="pwd3" placeholder="password" required #passwordInput2="ngModel" />
+						<div class="material-symbols-outlined" (click)="newpwd()">{{ cred3 ? 'visibility' : 'visibility_off' }}</div>
+					</div>
+				</div>
+				<button type="submit" class="submit-btn">update</button>
+				<div class="deact-btn" (click)="openDeactivation()">account deactivation</div>
+			</div>
+		</div>
+		<app-acc-deact *ngIf="showDeactivation" (close)="closeDeactivation()"></app-acc-deact>
+	</div>
+</div>

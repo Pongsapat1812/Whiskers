@@ -1,0 +1,19 @@
+<div class="popup">
+    <div class="deactivation-container">
+        <div class="deactivation-item">
+            <div class="text-45">deactivation</div>
+            <div class="text-2">
+                this action cannot be reversed<br>enter email address below
+            </div>
+            <div class="authen-item">
+                <div class="material-symbols-outlined">mail</div>
+                <input type="email" name="email" [(ngModel)]="email" placeholder="email" required
+                    #emailInput="ngModel" />
+            </div>
+            <div class="deactivation-actions">
+                <button type="submit" class="deact-btn" (click)="deact()">deactivate</button>
+                <button type="button" class="cancel-btn" (click)="cancel()">cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

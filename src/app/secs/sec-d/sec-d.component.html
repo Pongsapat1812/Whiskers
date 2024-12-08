@@ -1,0 +1,12 @@
+<section class="d" id="d" *ngIf="!AuthService.isAuthorized()">
+    <div class="text-45">companion introduction</div>
+    <div class="container">
+        <div *ngFor="let cat of cats" class="container-item">
+            <img [src]="cat.imgSrc" alt="img-{{cat.name}}" class="img-d">
+            <hr>
+            <div class="text-35">{{ cat.name }}</div>
+            <div class="text-2">{{ cat.attribute }}</div>
+            <hr>
+        </div>
+    </div>
+</section>

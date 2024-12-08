@@ -1,0 +1,48 @@
+<div class="popup" *ngIf="showLogin">
+	<div class="authen-container">
+		<div class="close-btn" (click)="closeLogin()">
+			<svg xmlns="http://www.w3.org/2000/svg" height="55px" viewBox="0 -960 960 960" width="55px" fill="#000000" class="close-left">
+				<path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+			</svg>
+		</div>
+		<div class="close-btn" (click)="closeLogin()">
+			<svg xmlns="http://www.w3.org/2000/svg" height="55px" viewBox="0 -960 960 960" width="55px" fill="#000000" class="close-right">
+				<path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+			</svg>
+		</div>
+		<div class="text-45">{{ isLogin ? 'login' : 'register' }}</div>
+		<form (ngSubmit)="submit()" #authForm="ngForm" class="authen-content">
+			<div class="authen-item">
+				<div class="material-symbols-outlined">mail</div>
+				<input
+					type="email"
+					name="email"
+					[(ngModel)]="email"
+					placeholder="email"
+					required
+					#emailInput="ngModel"
+				/>
+			</div>
+			<div class="authen-item">
+				<div class="material-symbols-outlined">alternate_email</div>
+				<div class="password">
+					<input
+						[type]="showCredential ? 'text' : 'password'"
+						name="password"
+						[(ngModel)]="password"
+						placeholder="password"
+						required
+						#passwordInput="ngModel"
+					/>
+					<div class="material-symbols-outlined" (click)="toggle()">
+						{{ showCredential ? 'visibility' : 'visibility_off' }}
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="submit-btn" [disabled]="authForm.invalid">enter here</button>
+			<div class="authen-btn" (click)="auth()">
+				{{ isLogin ? 'create an account here' : 'already have an account' }}
+			</div>
+		</form>
+	</div>
+</div>

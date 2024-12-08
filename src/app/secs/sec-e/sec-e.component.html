@@ -1,0 +1,10 @@
+<section class="e" id="e" *ngIf="!AuthService.isAuthorized()">
+    <div class="text-45">hashtag</div>
+    <div class="text-45">whiskers wonderland</div>
+    <div class="hashtag" *ngFor="let feedback of feedbacks">
+        <p>{{ feedback.feedback }}</p>
+        <small>{{ feedback.timestamp | date:'short' }}</small>
+    </div>
+    <button class="login-btn" (click)="openLogin()">login here</button>
+    <app-authen-log></app-authen-log>
+</section>

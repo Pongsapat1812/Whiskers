@@ -1,0 +1,6 @@
+.e .hashtag {
+    width: 50%;
+    margin: 2vw auto;
+    background-color: var(--white);
+    border: 0.1vw dashed var(--black);
+}

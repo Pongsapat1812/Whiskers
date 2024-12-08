@@ -1,0 +1,14 @@
+.icon-e {
+	position: fixed;
+	top: 5vh;
+	right: 5vw;
+	width: 5vw;
+	height: auto;
+	cursor: pointer;
+	transition: transform 0.25s ease, fill 0.25s ease;	
+}
+
+.icon-e:hover {
+	transform: scale(1.5);
+    fill: var(--hover);
+}

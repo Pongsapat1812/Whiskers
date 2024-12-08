@@ -1,0 +1,9 @@
+.c img {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 0.2vw dashed var(--black);
+}
+
+.c .container-item {
+    width: 30%;
+}

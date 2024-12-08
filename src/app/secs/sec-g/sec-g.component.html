@@ -1,0 +1,30 @@
+<section class="g" id="g" *ngIf="ready">
+    <div class="text-45">whiskers wonderland</div>
+    <div class="text-2">unwind with music and conversations</div>
+    <div class="text-3">{{ choose?.name }}'s chatroom</div>
+    <div class="container">
+        <div class="container-item">
+            <img src="./secs/sec-f/cat-b.png" alt="img-c" class="img-c">
+        </div>
+        <div class="container-item">
+            <div class="chatroom">
+                <div class="chat-messages">
+                    <div *ngFor="let message of messages" class="chat-message">
+                        <strong>{{ message.sender }}</strong>: {{ message.message }}
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" [(ngModel)]="newMessage" placeholder="Type a message..." />
+                    <button (click)="sendMessage()">Send</button>
+                </div>
+                <div *ngIf="showVideo">
+                    <div id="youtube-player-sec-g"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-item">
+            <img src="./secs/sec-f/cat-d.png" alt="img-g" class="img-g">
+        </div>
+    </div>
+    <button class="backbtn" (click)="back()">return back</button>
+</section>

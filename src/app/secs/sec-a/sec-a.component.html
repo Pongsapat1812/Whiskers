@@ -1,0 +1,7 @@
+<section class="a" id="a" *ngIf="!AuthService.isAuthorized()">
+    <div class="text-45">whiskers wonderland</div>
+    <div class="text-2">unwind with music and conversations</div>
+    <img src="../secs/sec-a/img-a.png" alt="img-a" class="img-a">
+    <button class="login-btn" (click)="openLogin()">login here</button>
+    <app-authen-log></app-authen-log>
+</section>

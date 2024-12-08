@@ -1,0 +1,40 @@
+.text-2 {
+    line-height: 0.55;
+}
+
+.deactivation-item {
+    width: 60vw;
+    max-width: 600px;
+    height: 40vh;
+    max-height: 400px;
+    padding: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background);
+    border: 0.2vw solid var(--black);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.authen-item {
+    width: 100%;
+    margin: 2vh auto;
+}
+
+.deactivation-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1vw;
+}
+
+button {
+    width: 100%;
+    padding: 0 2vw;
+    font-size: 2.5vw;
+}

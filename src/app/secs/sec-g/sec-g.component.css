@@ -1,0 +1,55 @@
+.g section {
+    height: 200vh;
+}
+
+.g .text-3 {
+    margin: 2vw auto;
+}
+
+.g img {
+    max-width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.g .container-item {
+    width: 30%;
+}
+
+.g .chatroom {
+    width: 100%;
+    max-width: 1500px;
+    height: 500px;
+    margin: 2vw auto;
+    background-color: var(--white);
+    border: 0.1vw dashed var(--black);
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.chat-input input {
+    flex: 1;
+    /* Makes the input take up available space */
+    padding: 10px;
+    font-size: 16px;
+}
+
+.chat-input button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #4CAF50;
+    /* Example color */
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0;
+    /* Prevents button from shrinking */
+}
+
+.chat-input button:hover {
+    background-color: #45a049;
+}
